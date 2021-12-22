@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoanService } from '../loan.service';
 import { Loan } from '../loan/loan.model';
 
+
 @Component({
   selector: 'app-loans',
   templateUrl: './loans.component.html',

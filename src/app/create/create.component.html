@@ -1,0 +1,33 @@
+<p>create works!</p>
+<div>
+    <label for="name"> Name </label>
+    <input [(ngModel)]="newLoan.name" type="text">
+
+    <label for="age"> Age </label>
+    <input type="text">
+
+    <label for="occupation"> Occupation </label>
+    <input type="text">
+
+    <label for="birthday"> Birthday </label>
+    <input type="text">
+
+    <label for="houseStatus"> houseStatus </label>
+    <input type="text">
+
+    <label for="rentCost"> rentCost </label>
+    <input type="number">
+
+    <label for="yearlyNetIncome"> yearlyNetIncome</label>
+    <input type="number">
+
+    <label for="requestedLoanAmount"> requestedLoanAmount </label>
+    <input type="number">
+
+    <label for="approvedLoan"> approvedLoan </label>
+    <input type="number">
+
+    <button (click)="onCreateLoan(newLoan)">Submit </button>
+
+
+</div>

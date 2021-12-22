@@ -3,50 +3,84 @@
 
 <div class="loan-div">
     <h2>{{loan.name}}</h2>
-    <!-- <p> Age: {{loan.age}} </p> 
-    <p> Birthday:  {{loan.birthday}} </p> -->
-    <table class="info-table">
-        <tr>
-          <th>Name:</th>
-          <td>{{loan.name}}</td>
-        </tr>
-        <tr>
-            <th>Age:</th>
-            <td>{{loan.age}}</td>
-        </tr>
-        <tr>
-            <th>Birthday:</th>
-            <td>{{loan.birthday}}</td>
-        </tr>
-        <tr>
-            <th>Occupation:</th>
-            <td>{{loan.occupation}}</td>
-        </tr>
-        <tr>
-            <th>houseStatus:</th>
-            <td>{{loan.houseStatus}}</td>
-        </tr>
-        <tr>
-            <th>rentCost:</th>
-            <td>{{loan.rentCost | currency}} </td>
-        </tr>
-        <tr>
-            <th>Net Income Per Year:</th>
-            <td>{{loan.yearlyNetIncome | currency}} </td>
-        </tr>
-        <tr>
-            <th class="make-red">Requested Loan Amount:</th>
-            <td class="make-red">{{loan.requestedLoanAmount| currency}} </td>
-        </tr>
-        <tr>
-            <th class="make-green">Approved Loan Amount:</th>
-            <td class="make-green">{{loan.approvedLoan| currency}} </td>
-        </tr>
-      </table>
+        <table class="info-table">
+            <tr>
+            <th>Name:</th>
+            <td>{{loan.name}}</td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td>{{loan.age}}</td>
+            </tr>
+            <tr>
+                <th>Birthday:</th>
+                <td>{{loan.birthday}}</td>
+            </tr>
+            <tr>
+                <th>Occupation:</th>
+                <td>{{loan.occupation}}</td>
+            </tr>
+            <tr>
+                <th>houseStatus:</th>
+                <td>{{loan.houseStatus}}</td>
+            </tr>
+            <tr>
+                <th>rentCost:</th>
+                <td>{{loan.rentCost | currency}} </td>
+            </tr>
+            <tr>
+                <th>Net Income Per Year:</th>
+                <td>{{loan.yearlyNetIncome | currency}} </td>
+            </tr>
+            <tr>
+                <th class="make-red">Requested Loan Amount:</th>
+                <td class="make-red">{{loan.requestedLoanAmount| currency}} </td>
+            </tr>
+            <tr>
+                <th class="make-green">Approved Loan Amount:</th>
+                <td class="make-green">{{loan.approvedLoan| currency}} </td>
+            </tr>
+        </table>
+        <div>
+
+            <table class="edit-table" *ngIf="show">
+                <tr>
+                    <th>Age:</th>
+                    <td>
+                        <input [(ngModel)]="newLoan.age"
+                            type="number" 
+                            value="" 
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <th>Requested Loan Amount:</th>
+                    <td>
+                        <input [(ngModel)]="newLoan.requestedLoanAmount"
+                            type="number" 
+                            value="" 
+                        >
+                    </td>
+                </tr>
+                <tr>
+                    <th>Approved Loan Amount:</th>
+                    <td>
+                        <input [(ngModel)]="newLoan.approvedLoan"
+                            type="number" 
+                            value="" 
+                        >
+                    </td>
+                </tr>
+            </table>
+            <button *ngIf= "show" class="update-btn" (click)="onUpdateLoan(loan.id, newLoan)"> Submit </button>
+        </div>
       <br>
-
-
-    <button class="edit-delete-btns"> Edit </button>
-    <button class="edit-delete-btns" (click)="onDeleteLoan(loan.id)"> Delete </button>
+      
+      
+            <button class="edit-delete-btns" (click)="show = !show"> 
+                {{show == true ? 'Return' : 'Edit'}}
+            </button>
+            <button class="edit-delete-btns" (click)="onDeleteLoan(loan.id)"> Delete </button>
 </div>
+    
 
