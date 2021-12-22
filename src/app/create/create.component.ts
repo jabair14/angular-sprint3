@@ -34,18 +34,20 @@ export class CreateComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    // this.loanService.getLoans().subscribe(
-    //   payload => {
-    //     this.loans = payload
-    //   }
-    // )
+    this.loanService.getLoans().subscribe(
+      payload => {
+        this.loans = payload
+        console.log(payload)
+      }
+    )
   }
 
   onCreateLoan(newLoan: any) {
+    // JSON.stringify(this.newLoan)
     this.loanService.createLoan(newLoan).subscribe(
       (res) => console.log("this is in onCreateLoan", res)
     )
-    // this.ngOnInit
+    this.ngOnInit
   }
 
 }

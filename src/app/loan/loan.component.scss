@@ -5,7 +5,7 @@
     padding: 10px 20px 10px 20px;
     margin: auto;
     width: 50%;
-    height: 500px;
+    height: 700px;
     text-align: center;
     justify-content: center;
 }
@@ -20,7 +20,7 @@
 .update-btn {
     margin:0 auto;
     display: inline-block;
-    width: 95.8%
+    width: 100%
     // margin-top: 5px;
     
 }
@@ -31,11 +31,13 @@
     text-align: left;
     margin: auto;
     font-size: 15px;
-    width: 700px;
+    width: 100%;
+    
 }
 
 .edit-table {
-    border: 1px solid black;
+    border: 10px solid blue;
+    width: 100%;
 }
 th, td {
     padding: 5px

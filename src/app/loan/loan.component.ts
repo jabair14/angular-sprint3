@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoanService } from '../loan.service';
 import { Loan } from './loan.model';
 import { NgModule } from '@angular/core';
@@ -35,20 +35,27 @@ export class LoanComponent implements OnInit {
     })
   }
 
+  reloadCurrentPage() {
+    window.location.reload()
+  }
+
   onDeleteLoan(id: number) {
     this.loanService.deleteLoan(id).subscribe(
       (res) => {
-        console.log(res)
+        console.log("deleted response", res)
       }
     )
   }
 
   onUpdateLoan(id:number, newLoan:any) {
     this.loanService.updateLoan(id, newLoan).subscribe(
-      (res) => console.log(res)
+      (res) => console.log("updated response", res)
     )
-    this.ngOnInit();
     this.show = false;
+    this.ngOnInit();
+    this.reloadCurrentPage()
+    
+    
   }
 
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Loan } from './loan/loan.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,10 @@ export class LoanService {
     return this.http.patch(`http://localhost:8082/api/funds/${id}`, newLoan)
   }
 
-  createLoan(newLoan: any){
-    return this.http.post("http://localhost:8082/api/funds", newLoan)
+  createLoan(newLoan: Loan): Observable <any> {
+    // const headers = {'content-type': 'application/json'}
+    //  const body = JSON.stringify(newLoan)
+    //  console.log(JSON.stringify(body))
+    return this.http.post<Loan>("http://localhost:8082/api/funds", newLoan )
   }
 }
