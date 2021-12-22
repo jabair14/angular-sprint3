@@ -17,4 +17,8 @@ export class LoanService {
   getLoan(id: number): Observable<any> {
     return this.http.get("http://localhost:8082/api/funds/"+id)
   }
+
+  deleteLoan(id: number): Observable<any> {
+    return this.http.delete(`http://localhost:8082/api/funds/${id}`)
+  }
 }

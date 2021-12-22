@@ -1,5 +1,6 @@
-<p>loans works!</p>
+<!-- <p>loans works!</p> -->
+<h2> Loan Requests </h2>
 
-<div *ngFor="let loan of loans">
+<div class="loans-container" *ngFor="let loan of loans">
     <a [routerLink]="['/loans', loan.id]"> {{loan.name}}</a>
 </div>

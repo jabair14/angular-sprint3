@@ -1,7 +1,7 @@
 .loan-div {
-    border: 1px solid black;
+    border: 1px solid white;
     box-shadow:5px 5px 5px black;
-    border-radius: 25px;
+    // border-radius: 25px;
     background-color: white;
     padding: 10px 20px 10px 20px;
     margin: auto;
@@ -17,13 +17,34 @@
 }
 
 .info-table {
-    border: 1px solid black;
-    text-align: center;
-    justify-content: center;
+    text-align: left;
     margin: auto;
-    th, td {
-        border: 1px solid black;
-        padding: 10px
-    }
+    font-size: 15px;
+    width: 700px;
     // padding: 20px
+}
+th, td {
+    // border: 1px solid black;
+    padding: 5px
+    
+}
+
+th {
+    background-color: rgb(73, 71, 71);
+    color: white;
+}
+
+td {
+    background-color: whitesmoke;
+    text-align: right;
+}
+
+.make-red {
+    background-color: red;
+    color: whitesmoke;
+}
+
+.make-green {
+    background-color: green;
+    color: whitesmoke;
 }

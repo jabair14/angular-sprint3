@@ -1,26 +1,52 @@
-<p>loan works!</p>
+<p></p>
+<p></p>
 
 <div class="loan-div">
-    <h2> Name: {{loan.name}}</h2>
+    <h2>{{loan.name}}</h2>
     <!-- <p> Age: {{loan.age}} </p> 
     <p> Birthday:  {{loan.birthday}} </p> -->
     <table class="info-table">
         <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Birthday</th>
+          <th>Name:</th>
+          <td>{{loan.name}}</td>
         </tr>
         <tr>
-          <td>{{loan.name}}</td>
-          <td>{{loan.age}}</td>
-          <td>{{loan.birthday}}</td>
+            <th>Age:</th>
+            <td>{{loan.age}}</td>
         </tr>
-        
+        <tr>
+            <th>Birthday:</th>
+            <td>{{loan.birthday}}</td>
+        </tr>
+        <tr>
+            <th>Occupation:</th>
+            <td>{{loan.occupation}}</td>
+        </tr>
+        <tr>
+            <th>houseStatus:</th>
+            <td>{{loan.houseStatus}}</td>
+        </tr>
+        <tr>
+            <th>rentCost:</th>
+            <td>{{loan.rentCost | currency}} </td>
+        </tr>
+        <tr>
+            <th>Net Income Per Year:</th>
+            <td>{{loan.yearlyNetIncome | currency}} </td>
+        </tr>
+        <tr>
+            <th class="make-red">Requested Loan Amount:</th>
+            <td class="make-red">{{loan.requestedLoanAmount| currency}} </td>
+        </tr>
+        <tr>
+            <th class="make-green">Approved Loan Amount:</th>
+            <td class="make-green">{{loan.approvedLoan| currency}} </td>
+        </tr>
       </table>
       <br>
 
 
     <button class="edit-delete-btns"> Edit </button>
-    <button class="edit-delete-btns"> Delete </button>
+    <button class="edit-delete-btns" (click)="onDeleteLoan(loan.id)"> Delete </button>
 </div>
 

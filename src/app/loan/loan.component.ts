@@ -24,4 +24,12 @@ export class LoanComponent implements OnInit {
     })
   }
 
+  onDeleteLoan(id: number) {
+    this.loanService.deleteLoan(id).subscribe(
+      (res) => {
+        console.log(res)
+      }
+    )
+  }
+
 }
