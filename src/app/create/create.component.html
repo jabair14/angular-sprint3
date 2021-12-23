@@ -1,33 +1,92 @@
-<p>create works!</p>
-<div>
-    <label for="name"> Name </label>
-    <input [(ngModel)]="newLoan.name" type="text">
 
-    <label for="age"> Age </label>
-    <input [(ngModel)]="newLoan.age" type="text">
+<p></p>
+<p></p>
 
-    <label for="occupation"> Occupation </label>
-    <input [(ngModel)]="newLoan.occupation" type="text">
-
-    <label for="birthday"> Birthday </label>
-    <input [(ngModel)]="newLoan.birthday" type="text">
-
-    <label for="houseStatus"> houseStatus </label>
-    <input [(ngModel)]="newLoan.houseStatus" type="text">
-
-    <label for="rentCost"> rentCost </label>
-    <input [(ngModel)]="newLoan.rentCost" type="number">
-
-    <label for="yearlyNetIncome"> yearlyNetIncome</label>
-    <input [(ngModel)]="newLoan.yearlyNetIncome" type="number">
-
-    <label for="requestedLoanAmount"> requestedLoanAmount </label>
-    <input [(ngModel)]="newLoan.requestedLoanAmount" type="number">
-
-    <label for="approvedLoan"> approvedLoan </label>
-    <input [(ngModel)]="newLoan.approvedLoan" type="number">
-
-    <button (click)="onCreateLoan(newLoan)">Submit </button>
+<div class="loan-div">
+    <h2>Create Loan</h2>
+    <table class="info-table">
+        <tr>
+            <th>Name:</th>
+            <td>
+                <input  [(ngModel)]="newLoan.name" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th>Age:</th>
+            <td>
+                <input [(ngModel)]="newLoan.age" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th>Birthday:</th>
+            <td>
+                <input [(ngModel)]="newLoan.birthday" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th>Occupation:</th>
+            <td>
+                <input [(ngModel)]="newLoan.occupation" type="text">
+            </td>
+        </tr>
+        <tr>
+            <th>houseStatus:</th>
+            <td>
+                <input [(ngModel)]="newLoan.houseStatus" type="text">
+            </td>
+        </tr>
+        <tr>
+        <th>rentCost:</th>
+        <td> 
+            <input [(ngModel)]="newLoan.rentCost" type="number">
+        </td>
+    </tr>
+    <tr>
+        <th>Net Income Per Year:</th>
+        <td> 
+            <input [(ngModel)]="newLoan.yearlyNetIncome" type="number">
+        </td>
+    </tr>
+    <tr>
+        <th class="make-red">Requested Loan Amount:</th>
+        <td class="make-red">
+            <input [(ngModel)]="newLoan.requestedLoanAmount" type="number">
+        </td>
+    </tr>
+    <tr>
+        <th class="make-green">Approved Loan Amount:</th>
+        <td class="make-green"> 
+            <input [(ngModel)]="newLoan.approvedLoan" type="number">
+        </td>
+    </tr>
+</table>
+<button mat-raised-button class="update-btn" color="primary" (click)="onCreateLoan(newLoan)">Submit </button>
 
 
 </div>
+<!-- <label for="name"> Name </label>
+<input [(ngModel)]="newLoan.name" type="text">
+
+<label for="age"> Age </label>
+<input [(ngModel)]="newLoan.age" type="text">
+
+<label for="occupation"> Occupation </label>
+<input [(ngModel)]="newLoan.occupation" type="text">
+
+<label for="birthday"> Birthday </label>
+<input [(ngModel)]="newLoan.birthday" type="text">
+
+<label for="houseStatus"> houseStatus </label>
+<input [(ngModel)]="newLoan.houseStatus" type="text">
+
+<label for="rentCost"> rentCost </label>
+<input [(ngModel)]="newLoan.rentCost" type="number">
+
+<label for="yearlyNetIncome"> yearlyNetIncome</label>
+<input [(ngModel)]="newLoan.yearlyNetIncome" type="number">
+
+<label for="requestedLoanAmount"> requestedLoanAmount </label>
+<input [(ngModel)]="newLoan.requestedLoanAmount" type="number">
+
+<label for="approvedLoan"> approvedLoan </label>
+<input [(ngModel)]="newLoan.approvedLoan" type="number"> -->

@@ -1,7 +1,20 @@
 <div class="container">
   <header>
-    <a routerLink="/loans"> Loans </a>
-    <a routerLink="/loans/create"> | Create Loan</a>
+    <!-- <button mat-fab (mouseover)="showLinks()"> Menu </button> -->
+    <!-- <a routerLink="/loans"> Loans </a>
+    <a routerLink="/loans/create"> | Create Loan</a> -->
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+          <a routerLink="/loans/create">Create Loan</a> 
+      </button>
+      
+      <button mat-menu-item>
+        <a routerLink="/loans"> Loans </a> 
+      </button>
+    </mat-menu>
   </header>
     <main>
       <router-outlet></router-outlet>

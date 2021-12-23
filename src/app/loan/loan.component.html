@@ -72,15 +72,15 @@
                     </td>
                 </tr>
             </table>
-            <button *ngIf= "show" class="update-btn" (click)="onUpdateLoan(loan.id, newLoan)"> Submit </button>
+            <button *ngIf= "show" mat-raised-button class="update-btn" (click)="onUpdateLoan(loan.id, newLoan)"> Submit </button>
         </div>
       <br>
       
       
-            <button class="edit-delete-btns" (click)="show = !show"> 
+            <button mat-raised-button color="primary" class="edit-delete-btns" (click)="show = !show"> 
                 {{show == true ? 'Cancel' : 'Edit'}}
             </button>
-            <button class="edit-delete-btns" (click)="onDeleteLoan(loan.id)"> Delete </button>
+            <button mat-raised-button color="warn" class="edit-delete-btns" (click)="onDeleteLoan(loan.id)"> Delete </button>
 </div>
     
 

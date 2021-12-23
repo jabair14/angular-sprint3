@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { LoanService } from '../loan.service';
 import { Loan } from './loan.model';
 import { NgModule } from '@angular/core';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-loan',

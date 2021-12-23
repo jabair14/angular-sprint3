@@ -8,6 +8,12 @@ import { LoanComponent } from './loan/loan.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CreateComponent } from './create/create.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +27,11 @@ import { CreateComponent } from './create/create.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

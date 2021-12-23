@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @Component({
@@ -9,3 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-sprint3';
 }
+
+// showLinks(){
+//   return console.log("this happened")
+// }
