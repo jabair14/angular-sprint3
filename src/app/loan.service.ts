@@ -28,9 +28,10 @@ export class LoanService {
   }
 
   createLoan(newLoan: Loan): Observable <any> {
+    console.log("this is on createLoan", newLoan)
     // const headers = {'content-type': 'application/json'}
     //  const body = JSON.stringify(newLoan)
     //  console.log(JSON.stringify(body))
-    return this.http.post<Loan>("http://localhost:8082/api/funds", newLoan )
+    return this.http.post("http://localhost:8082/api/funds", newLoan)
   }
 }

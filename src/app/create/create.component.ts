@@ -13,7 +13,9 @@ export class CreateComponent implements OnInit {
 
   loans: Loan[] = [];
 
-  // loans: Loan = {}
+  // loan: Loan = {
+  //   id: undefined
+  // }
 
   newLoan: Loan = {
     name: "",
@@ -42,11 +44,16 @@ export class CreateComponent implements OnInit {
     )
   }
 
-  onCreateLoan(newLoan: any) {
-    // JSON.stringify(this.newLoan)
-    this.loanService.createLoan(newLoan).subscribe(
-      (res) => console.log("this is in onCreateLoan", res)
-    )
+  onCreateLoan(newLoan: Loan) {
+    this.loanService.createLoan(newLoan).subscribe(payload => {
+      this.newLoan = payload
+      console.log("this is onCreateLoan Payload=", payload)
+    }
+      // (res) => res = JSON.stringify(newLoan)
+      // (res) => console.log("this is in onCreateLoan", res)
+      )
+      
+      
     this.ngOnInit
   }
 

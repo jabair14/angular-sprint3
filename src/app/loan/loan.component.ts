@@ -29,7 +29,7 @@ export class LoanComponent implements OnInit {
     this.route.params.subscribe(params => {
       const myid = +params['id'];
       this.loanService.getLoan(myid).subscribe(payload => {
-        console.log( "this is in loan.components", payload)
+        console.log( "this is the payload", payload)
         this.loan = payload
       })
     })
