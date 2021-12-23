@@ -27,7 +27,7 @@ export class LoanService {
     return this.http.patch(`http://localhost:8082/api/funds/${id}`, newLoan)
   }
 
-  createLoan(newLoan: Loan): Observable <any> {
+  createLoan(newLoan: any): Observable <any> {
     console.log("this is on createLoan", newLoan)
     // const headers = {'content-type': 'application/json'}
     //  const body = JSON.stringify(newLoan)

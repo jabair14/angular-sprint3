@@ -17,7 +17,7 @@ export class CreateComponent implements OnInit {
   //   id: undefined
   // }
 
-  newLoan: Loan = {
+  newLoan: any = {
     name: "",
     age: 0,
     occupation: "",
@@ -44,17 +44,13 @@ export class CreateComponent implements OnInit {
     )
   }
 
-  onCreateLoan(newLoan: Loan) {
+  onCreateLoan(newLoan: any) {
     this.loanService.createLoan(newLoan).subscribe(payload => {
       this.newLoan = payload
       console.log("this is onCreateLoan Payload=", payload)
-    }
-      // (res) => res = JSON.stringify(newLoan)
-      // (res) => console.log("this is in onCreateLoan", res)
-      )
-      
-      
+    })
     this.ngOnInit
+    this.router.navigateByUrl("/loans")
   }
 
 }

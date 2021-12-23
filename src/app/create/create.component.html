@@ -4,28 +4,28 @@
     <input [(ngModel)]="newLoan.name" type="text">
 
     <label for="age"> Age </label>
-    <input type="text">
+    <input [(ngModel)]="newLoan.age" type="text">
 
     <label for="occupation"> Occupation </label>
-    <input type="text">
+    <input [(ngModel)]="newLoan.occupation" type="text">
 
     <label for="birthday"> Birthday </label>
-    <input type="text">
+    <input [(ngModel)]="newLoan.birthday" type="text">
 
     <label for="houseStatus"> houseStatus </label>
-    <input type="text">
+    <input [(ngModel)]="newLoan.houseStatus" type="text">
 
     <label for="rentCost"> rentCost </label>
-    <input type="number">
+    <input [(ngModel)]="newLoan.rentCost" type="number">
 
     <label for="yearlyNetIncome"> yearlyNetIncome</label>
-    <input type="number">
+    <input [(ngModel)]="newLoan.yearlyNetIncome" type="number">
 
     <label for="requestedLoanAmount"> requestedLoanAmount </label>
-    <input type="number">
+    <input [(ngModel)]="newLoan.requestedLoanAmount" type="number">
 
     <label for="approvedLoan"> approvedLoan </label>
-    <input type="number">
+    <input [(ngModel)]="newLoan.approvedLoan" type="number">
 
     <button (click)="onCreateLoan(newLoan)">Submit </button>
 

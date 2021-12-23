@@ -23,7 +23,8 @@ export class LoanComponent implements OnInit {
 
   show = false;
 
-  constructor(private route:ActivatedRoute, private loanService: LoanService) { }
+  constructor(private route:ActivatedRoute, private loanService: LoanService, 
+    private router:Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -41,10 +42,12 @@ export class LoanComponent implements OnInit {
 
   onDeleteLoan(id: number) {
     this.loanService.deleteLoan(id).subscribe(
-      (res) => {
-        console.log("deleted response", res)
-      }
-    )
+      data => {
+        if (data) {
+          this.router.navigateByUrl("/loans")
+        }
+        this.ngOnInit();
+      }) 
   }
 
   onUpdateLoan(id:number, newLoan:any) {
@@ -53,9 +56,6 @@ export class LoanComponent implements OnInit {
     )
     this.show = false;
     this.ngOnInit();
-    this.reloadCurrentPage()
-    
-    
+    this.reloadCurrentPage()  
   }
-
 }
