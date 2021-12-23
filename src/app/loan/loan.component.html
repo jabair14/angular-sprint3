@@ -21,11 +21,11 @@
                 <td>{{loan.occupation}}</td>
             </tr>
             <tr>
-                <th>houseStatus:</th>
+                <th>Rent or Own:</th>
                 <td>{{loan.houseStatus}}</td>
             </tr>
             <tr>
-                <th>rentCost:</th>
+                <th>Rent or Mortgage Cost:</th>
                 <td>{{loan.rentCost | currency}} </td>
             </tr>
             <tr>
@@ -81,6 +81,7 @@
                 {{show == true ? 'Cancel' : 'Edit'}}
             </button>
             <button mat-raised-button color="warn" class="edit-delete-btns" (click)="onDeleteLoan(loan.id)"> Delete </button>
+            <p>{{doSomeLogic()}}</p>
 </div>
     
 

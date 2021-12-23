@@ -23,6 +23,7 @@ export class LoanComponent implements OnInit {
   }
 
   show = false;
+  // approvedLoan: number = this.loan;
 
   constructor(private route:ActivatedRoute, private loanService: LoanService, 
     private router:Router) { }
@@ -59,4 +60,10 @@ export class LoanComponent implements OnInit {
     this.ngOnInit();
     this.reloadCurrentPage()  
   }
+
+  doSomeLogic(){
+    return console.log("something")
+  }
+
+
 }

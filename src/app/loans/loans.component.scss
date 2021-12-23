@@ -1,9 +1,51 @@
-.loans-container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 5px 2px 20px;
+// .loans-container {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 10px 5px 2px 20px;
+// }
+
+.loan-div {
+    border: 1px solid white;
+    box-shadow:5px 5px 5px black;
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    margin: auto;
+    width: 50%;
+    // height: 700px;
+    text-align: center;
+    justify-content: center;
 }
 
 h2 {
     padding: 20px;
 }
+
+.info-table {
+    text-align: left;
+    margin: auto;
+    font-size: 20px;
+    width: 100%;
+    
+}
+
+th, td {
+    padding: 1px;
+    justify-content: center;
+}
+
+th {
+    background-color: rgba(37, 34, 117, 0.286);
+    color: white;
+    // margin: auto;
+}
+
+td {
+    background-color: whitesmoke;
+    text-align: right;
+    // align-items: right;
+}
+
+// tr {
+//     display: flex;
+//     justify-content: left;
+// }
